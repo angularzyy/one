@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="list/reset.css">
+    <link rel="stylesheet" href="list/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+       <div class="top">
+          <img src="img/index_top.png" alt="">
+          <div class="list">
+          <ul>
+              <li><h4>已报名</h4><p>126</p></li>
+              <li><h4>投票人次</h4><p>964</p></li>
+              <li><h4>浏览量</h4><p>1623</p></li>
+          </ul>
+          </div>
+           <div class="zi">
+            <h3>距离活动结束还剩：12天16时25分17秒</h3>
+          </div>
+        <div class="search">
+          <input type="text" placeholder="请输入喵主子名字或编号"><img src="img/index_search.png" alt="">
+        </div>
+       </div>
+     <div class="swiper-container">
+        <nav>
+         <span class="on">每日推荐</span>
+         <span>投票排行</span>
+         <span>TOP 300</span>
+        </nav>
+        <div class="swiper-wrapper">
+           <div class="swiper-slide">
+                 <dl>
+                       <dt><img src="img/maomi.png" alt=""/></dt>
+                        <dd>
+                            <p><em>喵咪名字</em><em>122票</em></p>
+                            <p><span>投票</span></p>
+                        </dd>
+                    </dl>
+                   <dl>
+                       <dt><img src="img/maomi2.png" alt=""/></dt>
+                       <dd>
+                           <p><em>喵咪名字</em><em>122票</em></p>
+                           <p><span>投票</span></p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt><img src="img/maomi.png" alt=""/></dt>
+                       <dd>
+                           <p><em>喵咪名字</em><em>122票</em></p>
+                           <p><span>投票</span></p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt><img src="img/maomi2.png" alt=""/></dt>
+                       <dd>
+                           <p><em>喵咪名字</em><em>122票</em></p>
+                           <p><span>投票</span></p>
+                       </dd>
+                   </dl>
+           </div>
+           <div class="swiper-slide">
+                 <dl>
+                       <dt><img src="img/maomi.png" alt=""/></dt>
+                        <dd>
+                            <p><em>喵咪名字</em><em>122票</em></p>
+                            <p><span>投票</span></p>
+                        </dd>
+                    </dl>
+                   <dl>
+                       <dt><img src="img/maomi2.png" alt=""/></dt>
+                       <dd>
+                           <p><em>喵咪名字</em><em>122票</em></p>
+                           <p><span>投票</span></p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt><img src="img/maomi.png" alt=""/></dt>
+                       <dd>
+                           <p><em>喵咪名字</em><em>122票</em></p>
+                           <p><span>投票</span></p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt><img src="img/maomi2.png" alt=""/></dt>
+                       <dd>
+                           <p><em>喵咪名字</em><em>122票</em></p>
+                           <p><span>投票</span></p>
+                       </dd>
+                   </dl>
+           </div>
+           <div class="swiper-slide">
+               <dl>
+                       <dt><img src="img/maomi.png" alt=""/></dt>
+                        <dd>
+                            <p><em>喵咪名字</em><em>122票</em></p>
+                            <p><span>投票</span></p>
+                        </dd>
+                    </dl>
+                   <dl>
+                       <dt><img src="img/maomi2.png" alt=""/></dt>
+                       <dd>
+                           <p><em>喵咪名字</em><em>122票</em></p>
+                           <p><span>投票</span></p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt><img src="img/maomi.png" alt=""/></dt>
+                       <dd>
+                           <p><em>喵咪名字</em><em>122票</em></p>
+                           <p><span>投票</span></p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt><img src="img/maomi2.png" alt=""/></dt>
+                       <dd>
+                           <p><em>喵咪名字</em><em>122票</em></p>
+                           <p><span>投票</span></p>
+                       </dd>
+                   </dl>
+           </div>
+        </div>
+         <div class="swiper-pagination"></div>
+     </div>
+    
+    </div>
+    <script src="list/jquery.min.js"></script>
+    <script src="list/swiper.min.js"></script>
+    <script>
+          $('nav').on("click","span", function () {
+           var index=$(this).index();
+           slideTo(index);
+           $(this).addClass("active").siblings().removeClass();
+        })
+       var banner=new Swiper(".swiper-container",{
+           pagination:".swiper-pagination",
+           paginationClickable:true,
+           loop:true,
+           onSlideChangeStart:function(swiper){
+               $("nav span").eq(swiper.activeIndex).addClass("on").siblings().removeClass("on");
+           }
+       })
+       function slideTo(index){
+           banner.slideTo(index);
+       }
+
+        </script>
+</body>
+</html>
