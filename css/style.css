@@ -46,7 +46,7 @@ html,body,.wrap{
     color:#fff;
 }
 .wrap main{
-    flex:1;  
+    flex:1;
     width:100%;
     overflow-y: scroll;
 }
@@ -93,5 +93,5 @@ html,body,.wrap{
 }
 .wrap footer span.bg{
     border-bottom:3px solid#FEB800;
-    color:#FEB800
+    color:#FEB800;
 }
